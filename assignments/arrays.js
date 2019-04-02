@@ -81,16 +81,30 @@ console.log(`${lastCar.car_make} ${lastCar.car_model}`); //used template literal
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
-let carModels = [];
-console.log();
+
+let carModels = []; //contain all car models from the inventory array.
+
+for (let i=0; i<inventory.length; i++){
+    carModels.push(inventory[i].car_model);      //for loop accross the entire inventory array looking for all car_model and adding them to carModels array
+}
+console.log(carModels.sort());                      //sorting the carModels array alphabetically in ascending order
+
+                                                    //sorting in descending .sort() .reverse()
 
 
 
 
 // ==== Challenge 4 ====
-// The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
-let carYears = [];
-console.log();
+// The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the rgesult in the console.
+
+let carYears = []; //contains all the years from every car in the inventory array
+
+for (let i=0; i<inventory.length; i++){
+    carYears.push(inventory[i].car_year);      //for loop accross the entire inventory array looking for all car_year and adding them to carYears array
+}
+
+console.log(carYears);  // all car years in the array
+
 
 // ==== Challenge 5 ====
 // The car lot manager needs to find out how many cars are older than the year 2000. Using the carYears array you just created, find out how many cars were made before the year 2000 by populating the array oldCars and logging it's length.

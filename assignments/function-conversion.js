@@ -5,10 +5,11 @@
 // };
 // myFunction();
 
-let myFunction = () => {};
-console.log("Function was invoked!");
-
-myFunction();
+let myFunction =  () => {
+  console.log("Function was invoked!");
+  };
+  
+  myFunction();
 
 
 

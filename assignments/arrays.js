@@ -108,13 +108,39 @@ console.log(carYears);  // all car years in the array
 
 // ==== Challenge 5 ====
 // The car lot manager needs to find out how many cars are older than the year 2000. Using the carYears array you just created, find out how many cars were made before the year 2000 by populating the array oldCars and logging it's length.
-let oldCars = [];
-console.log(); 
+let oldCars = []; //contains all the carYears <2000
+
+for (let i=0; i<carYears.length; i++) {   //for loop accross all car_year and adding all car_years <2000 to oldCars array
+    if (carYears[i]< 2000) {                // conditional statement 'if'
+        oldCars.push(carYears[i]); 
+    }
+             
+}
+// console.log(oldCars); 
+
+console.log(oldCars.length);
+
+
+
 
 // ==== Challenge 6 ====
 // A buyer is interested in seeing only BMW and Audi cars within the inventory.  Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
-let BMWAndAudi = [];
-console.log();
+let BMWAndAudi = []; //contains all BMW and Audi cars
+
+for (let i=0; i<inventory.length; i++) {   //for loop accross inventory and add all car_make === Audi and BMW to BMWAndAudi array
+    if (inventory[i].car_make === 'Audi') {                // conditional statement 'if'
+        BMWAndAudi.push(inventory[i]); 
+    }
+
+    else if (inventory[i].car_make === 'BMW') {         // conditional statement 'else if'
+        BMWAndAudi.push(inventory[i]);
+    }
+             
+}
+
+// console.log(BMWAndAudi);
+
+console.log('BMW and Audi in inventory: ' + JSON.stringify(BMWAndAudi)); //JSON.stringify() method converts a JS object or value to a JSON string.
 
 
 
